@@ -9,7 +9,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class UserProfile extends Vue {
-  @Prop() private id!: Integer;
+  @Prop() private id!: number;
 }
 </script>
 
