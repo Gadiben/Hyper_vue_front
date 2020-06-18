@@ -12,8 +12,8 @@ import UserProfile from "@/components/UserProfile.vue";
 export default {
   name: "Profile",
   components: {
-    UserProfile,
-  },
+    UserProfile
+  }
 };
 </script>
 Z
