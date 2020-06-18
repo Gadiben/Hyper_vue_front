@@ -1,18 +1,12 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
-import UserProfile from "../views/UserProfile.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "users/:id", 
-    name: "UserProfile",
-    component: UserProfile,
-  }
-  {
-    path: "/Home",
+    path: "/",
     name: "Home",
     component: Home,
   },
