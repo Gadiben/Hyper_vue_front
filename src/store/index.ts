@@ -1,23 +1,14 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { INCREMENT } from "./mutation-types";
-
+import usersModule from "./modules/usersModule";
 Vue.use(Vuex);
 const debug = process.env.NODE_ENV !== "production";
 
 export default new Vuex.Store({
+  modules: {
+    usersModule,
+  },
   state: {
-    count: 0,
+    apiURL: "",
   },
-  mutations: {
-    [INCREMENT](state, amount) {
-      state.count += amount ? amount : 1;
-    },
-  },
-  actions: {
-    incrementCount(context, amount) {
-      context.commit("INCREMENT", amount);
-    },
-  },
-  modules: {},
 });
