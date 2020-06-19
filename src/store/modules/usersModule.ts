@@ -19,7 +19,6 @@ const usersModule: Module<any, any> = {
       commit("INCREMENT", amount);
     },
     fetchUser({ commit }, id: number) {
-      console.log("DIspatching action");
       userAPI
         .fetchUser(id)
         .then((user: any) => {
