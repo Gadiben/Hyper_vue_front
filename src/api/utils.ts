@@ -13,7 +13,7 @@ const objectToQueryParams = function(object: any) {
   return (
     "?" +
     Object.keys(object)
-      .map((k) => k + "=" + object[k])
+      .map(k => k + "=" + object[k])
       .join("&")
   );
 };
@@ -31,22 +31,22 @@ const apiUtils: any = {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json;charset=UTF-8",
-          ...authToken,
+          ...authToken
         },
-        body: request.body,
+        body: request.body
       }).then(
-        (response) => {
+        response => {
           if (response.ok) {
             resolve(response.json());
           } else {
             reject(new Error("error"));
           }
         },
-        (error) => {
+        error => {
           reject(new Error(error.message));
         }
       );
     });
-  },
+  }
 };
 export default apiUtils;
