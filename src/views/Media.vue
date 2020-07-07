@@ -10,20 +10,50 @@
       <div class="widget">
         <p>{{ media.description }}</p>
       </div>
-      <Carrousel
-        :medias="[
-          {
-            id: 0,
-            src:
-              'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
-          },
-          {
-            id: 1,
-            src:
-              'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
-          },
-        ]"
-      />
+      <div class="media-page-body">
+        <Carrousel
+          :medias="[
+            {
+              id: 0,
+              src:
+                'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
+            },
+            {
+              id: 1,
+              src:
+                'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
+            },
+          ]"
+        />
+        <Carrousel
+          :medias="[
+            {
+              id: 0,
+              src:
+                'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
+            },
+            {
+              id: 1,
+              src:
+                'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
+            },
+          ]"
+        />
+        <Carrousel
+          :medias="[
+            {
+              id: 0,
+              src:
+                'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
+            },
+            {
+              id: 1,
+              src:
+                'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
+            },
+          ]"
+        />
+      </div>
     </div>
     <div class="right-page">
       <div class="widget">
@@ -62,11 +92,8 @@ export default {
   grid-template-columns: 1fr 3fr 1fr;
   grid-gap: 5px;
 }
-.carrousel-image {
-  max-height: 100%;
-}
 .media-image-container img {
-  width: 100%;
+  width: 80%;
 }
 .widget {
   margin: 30px auto;
@@ -74,5 +101,11 @@ export default {
   box-shadow: lightgrey 0 0 15px 0;
   border-radius: 10px;
   overflow: hidden;
+}
+.media-page-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  height: 100%;
 }
 </style>
